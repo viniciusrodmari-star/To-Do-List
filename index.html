@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Minha To-Do List</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Minha To-Do List</h1>
+
+<div class="card">
+    <input type="text" id="titulo" placeholder="Título da tarefa">
+    <input type="text" id="descricao" placeholder="Descrição">
+
+    <select id="prioridade">
+        <option value="alta">Alta</option>
+        <option value="media">Média</option>
+        <option value="baixa">Baixa</option>
+    </select>
+
+    <input type="datetime-local" id="data">
+
+    <button onclick="adicionarTarefa()">Adicionar</button>
+</div>
+
+<ul id="lista"></ul>
+
+<div id="toast"></div>
+
+<div class="calendario">
+    <div class="header-cal">
+        <button onclick="mesAnterior()">◀</button>
+        <h2 id="mesAno"></h2>
+        <button onclick="proximoMes()">▶</button>
+    </div>
+    <div id="dias" class="dias"></div>
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span onclick="fecharModal()">✖</span>
+        <div id="tarefasDia"></div>
+    </div>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
